@@ -1,12 +1,9 @@
 version: "3"
-
-volumes:
-  postgres_data:
-    driver: local
 services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
+    network_mode: host
     hostname: rabbitmq
     volumes:
       - /var/lib/rabbitmq
@@ -19,13 +16,15 @@ services:
       RABBITMQ_HOST: localhost
       RABBITMQ_PORT: 5672
       RABBITMQ_QUEUE_NAME: zegal-task
-  # postgres:
-  #   image: postgres
-  #   volumes:
-  #     - postgres_data:/var/lib/postgresql/data
-  #   environment:
-  #     POSTGRES_DB: nestdb
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: postgres
-  #   ports:
-  #     - "5432:5432"
+  zegaltask:
+    build: .
+    image: zegaltask
+    container_name: zegaltask
+    network_mode: host
+    restart: always
+    environment:
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+      RABBITMQ_HOST: localhost
+      RABBITMQ_PORT: 5672
+      RABBITMQ_QUEUE_NAME: zegal-task
