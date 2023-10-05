@@ -28,21 +28,18 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
-
-```bash
 $ npm install
 
 
 ## Running the app
 Need rabbit mq installed locally.
 
-
-```bash
 # development
 $ npm run start:dev
 
 Access frontend: http://localhost:3001/assets/socket.html
 
+To run from docker: sudo run docker compose up -d 
 
 Architecture :
           +-------------------+
