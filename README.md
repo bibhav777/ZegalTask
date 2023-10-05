@@ -26,6 +26,11 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is a normal way to complete task. In future we can do it in more better way : 
+To do: 
+1. For now data is directly passed through queue but we can create exchanges and bind it to queue with routing keys which is more possible good way.
+2. We can use multiple consumers as huge data is generated in a minute. More consumers means there is less chance to server to be crashed. 
+
 
 ## Installation
 $ npm install
