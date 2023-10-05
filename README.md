@@ -36,8 +36,8 @@ Need rabbit mq installed locally.
 
 # development
 $ npm run start:dev
-Access frontend: http://localhost:3001/assets/socket.html
 
+Access frontend: http://localhost:3001/assets/socket.html
 
 Architecture :
           +-------------------+
