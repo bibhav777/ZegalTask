@@ -39,8 +39,6 @@ $ npm run start:dev
 
 Access frontend: http://localhost:3001/assets/socket.html
 
-To run from docker: sudo run docker compose up -d 
-
 Architecture :
           +-------------------+
           |   Client Server   |
@@ -70,8 +68,4 @@ Architecture :
           +-------------------+
 
 
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+To run from docker: sudo run docker compose up -d 
